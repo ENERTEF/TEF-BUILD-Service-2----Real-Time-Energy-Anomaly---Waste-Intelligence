@@ -104,4 +104,47 @@ Detections are classified by type, covering:
 - Billing boundary artefacts
 - Meter and sensor data quality issues, including resets and gaps
 
-Each detection is assigned a **confidence score** reflecting the statistical strength of the deviation, the quality of the underlying data and the consistency of the signal across consecutive intervals and streams. Detections meeting a minimum confidence threshold are passed to the waste register with an estimated annual waste magnitude expressed in physical
+Each detection is assigned a **confidence score** reflecting the statistical strength of the deviation, the quality of the underlying data and the consistency of the signal across consecutive intervals and streams. Detections meeting a minimum confidence threshold are passed to the waste register with an estimated annual waste magnitude expressed in physical units (kWh, litres of diesel or litres of water) and in euros, computed by projecting the observed deviation rate forward over a full year under similar conditions.
+
+---
+
+## 5. Service Outputs
+
+For each building and detection cycle, the service produces:
+
+- An anomaly status classification
+- A waste type label
+- An estimated waste magnitude (physical units and euros)
+- A confidence score
+- A supporting evidence summary covering the observed readings across all relevant streams, the baseline expectation, the prevailing weather context, indoor temperature conditions and the occupancy status at the time of detection
+
+At portfolio level, the service maintains a continuously updated **waste register** ranked by estimated annual financial impact, providing the central energy management team with a clear view of where intervention effort will generate the greatest return. Trend indicators per building show whether waste levels are improving, stable or deteriorating across successive reporting periods, supporting accountability and progress tracking.
+
+---
+
+## 6. Evaluation and Validation
+
+Detection performance is evaluated through a **walk-forward protocol** applied to historical data, generating anomaly flags using only the information available at each detection point and comparing results against a reference set of confirmed waste events identified through retrospective bill analysis and operator records.
+
+| Indicator | Description |
+|---|---|
+| **Detection precision** | Proportion of flags corresponding to genuine waste events |
+| **Detection recall** | Proportion of known waste events successfully identified by the service |
+| **Waste quantification accuracy** | MAPE between the service estimate and the independently verified waste magnitude for a sample of confirmed events |
+| **Time to detection** | Time from the start of an anomalous event to the first flag raised, tracked as a secondary indicator of operational value |
+
+---
+
+## 7. Implementation and Availability
+
+The service is accessible through an **authenticated REST API** delivering anomaly detections, waste register snapshots and building-level trend summaries in structured JSON format.
+
+The detection pipeline is structured as independent, versioned modules:
+
+1. Data ingestion and quality control (electricity, PV, diesel, water and temperature streams)
+2. Weather normalisation
+3. Baseline computation per building and stream
+4. Anomaly scoring and cross-stream corroboration
+5. Output generation
+
+Each module is versioned and logged to ensure full reproducibility of all historical detections. Baseline profiles, detection thresholds and model versions are stored with each output record, allowing any past detection to be reconstructed and audited.
