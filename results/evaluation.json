@@ -1,0 +1,180 @@
+{
+ "baseline": {
+  "dei": {
+   "meters": 9,
+   "better_than_reference": 5,
+   "median_daily_rmse_share": 0.139,
+   "median_daily_rmse_share_reference": 0.146
+  },
+  "eunice": {
+   "meters": 21,
+   "better_than_reference": 16,
+   "median_daily_rmse_share": 0.19,
+   "median_daily_rmse_share_reference": 0.19
+  },
+  "sensor": {
+   "meters": 43,
+   "better_than_reference": 35,
+   "median_daily_rmse_share": 0.217,
+   "median_daily_rmse_share_reference": 0.3
+  }
+ },
+ "synthetic": {
+  "ghost_load": {
+   "injected": 73,
+   "recall": 0.685,
+   "recall_any_type": 0.685,
+   "precision": 0.869,
+   "median_hours_to_detection": 53.8,
+   "waste_mape": 0.358
+  },
+  "unoccupied_waste": {
+   "injected": 73,
+   "recall": 0.452,
+   "recall_any_type": 0.452,
+   "precision": 0.955,
+   "median_hours_to_detection": 170.8,
+   "waste_mape": 0.061
+  },
+  "equipment_fault": {
+   "injected": 73,
+   "recall": 0.233,
+   "recall_any_type": 0.233,
+   "precision": 0.708,
+   "median_hours_to_detection": 7.8,
+   "waste_mape": 0.391
+  },
+  "degradation_drift": {
+   "injected": 73,
+   "recall": 0.0,
+   "recall_any_type": 0.37,
+   "precision": 1.0,
+   "median_hours_to_detection": null,
+   "waste_mape": null
+  },
+  "clean": {
+   "meters": 73,
+   "flags": 127,
+   "flags_per_meter_week": 0.32
+  }
+ },
+ "synthetic_by_source": {
+  "dei": {
+   "ghost_load": {
+    "injected": 9,
+    "recall": 1.0,
+    "recall_any_type": 1.0,
+    "precision": 0.75,
+    "median_hours_to_detection": 53.8,
+    "waste_mape": 0.189
+   },
+   "unoccupied_waste": {
+    "injected": 9,
+    "recall": 0.333,
+    "recall_any_type": 0.333,
+    "precision": 1.0,
+    "median_hours_to_detection": 2.8,
+    "waste_mape": 0.021
+   },
+   "equipment_fault": {
+    "injected": 9,
+    "recall": 0.444,
+    "recall_any_type": 0.444,
+    "precision": 0.5,
+    "median_hours_to_detection": 7.8,
+    "waste_mape": 0.395
+   },
+   "degradation_drift": {
+    "injected": 9,
+    "recall": 0.0,
+    "recall_any_type": 0.556,
+    "precision": 1.0,
+    "median_hours_to_detection": null,
+    "waste_mape": null
+   },
+   "clean": {
+    "meters": 9,
+    "flags": 28,
+    "flags_per_meter_week": 0.573
+   }
+  },
+  "eunice": {
+   "ghost_load": {
+    "injected": 21,
+    "recall": 0.571,
+    "recall_any_type": 0.571,
+    "precision": 0.867,
+    "median_hours_to_detection": 53.8,
+    "waste_mape": 0.411
+   },
+   "unoccupied_waste": {
+    "injected": 21,
+    "recall": 0.286,
+    "recall_any_type": 0.286,
+    "precision": 1.0,
+    "median_hours_to_detection": 2.8,
+    "waste_mape": 0.127
+   },
+   "equipment_fault": {
+    "injected": 21,
+    "recall": 0.238,
+    "recall_any_type": 0.238,
+    "precision": 1.0,
+    "median_hours_to_detection": 9.8,
+    "waste_mape": 0.346
+   },
+   "degradation_drift": {
+    "injected": 21,
+    "recall": 0.0,
+    "recall_any_type": 0.286,
+    "precision": 1.0,
+    "median_hours_to_detection": null,
+    "waste_mape": null
+   },
+   "clean": {
+    "meters": 21,
+    "flags": 45,
+    "flags_per_meter_week": 0.395
+   }
+  },
+  "sensor": {
+   "ghost_load": {
+    "injected": 43,
+    "recall": 0.674,
+    "recall_any_type": 0.674,
+    "precision": 0.906,
+    "median_hours_to_detection": 53.8,
+    "waste_mape": 0.388
+   },
+   "unoccupied_waste": {
+    "injected": 43,
+    "recall": 0.558,
+    "recall_any_type": 0.558,
+    "precision": 0.935,
+    "median_hours_to_detection": 170.8,
+    "waste_mape": 0.05
+   },
+   "equipment_fault": {
+    "injected": 43,
+    "recall": 0.186,
+    "recall_any_type": 0.186,
+    "precision": 0.727,
+    "median_hours_to_detection": 7.8,
+    "waste_mape": 0.417
+   },
+   "degradation_drift": {
+    "injected": 43,
+    "recall": 0.0,
+    "recall_any_type": 0.372,
+    "precision": 1.0,
+    "median_hours_to_detection": null,
+    "waste_mape": null
+   },
+   "clean": {
+    "meters": 43,
+    "flags": 54,
+    "flags_per_meter_week": 0.231
+   }
+  }
+ }
+}

@@ -1,0 +1,3 @@
+# Dependencies of the pipeline
+pandas>=2.2
+numpy>=1.26

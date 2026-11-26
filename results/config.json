@@ -1,0 +1,68 @@
+{
+ "run_id": "20261109T215456Z",
+ "model_version": "waste-intel 1.0.0",
+ "run_date": "2026-11-09",
+ "data_end": {
+  "sensor": "2026-11-08",
+  "eunice": "2026-11-02",
+  "dei": "2026-05-31"
+ },
+ "fallback_price_eur_kwh": 0.1565,
+ "thresholds": {
+  "qc_window_days": 60,
+  "qc_max_age_days": 7,
+  "qc_min_coverage": 0.85,
+  "qc_max_zero_share": 0.1,
+  "qc_max_spike_share": 0.005,
+  "qc_max_stuck_share": 0.01,
+  "qc_min_kwh_day": 5.0,
+  "qc_max_kwh_day_school": 1500.0,
+  "day_min_slots": 80,
+  "baseline_lookback_days": 365,
+  "baseline_neighbours": 8,
+  "baseline_min_neighbours": 4,
+  "baseline_age_per_dd": 14,
+  "exclusion_memory_days": 14,
+  "z_threshold": 3.0,
+  "min_excess_share": 0.15,
+  "min_excess_kwh": 0.02,
+  "block_z": 3.0,
+  "block_min_rise": 0.1,
+  "night_hours": [
+   0,
+   6
+  ],
+  "open_hours_school": [
+   8,
+   16
+  ],
+  "open_hours_municipal": [
+   7,
+   17
+  ],
+  "ghost_min_nights": 3,
+  "event_min_slots": 12,
+  "event_min_kwh": 1.0,
+  "event_min_day_share": 0.03,
+  "post_holiday_min_closed_days": 3,
+  "post_holiday_z": 2.5,
+  "drift_window_days": 28,
+  "drift_min_rise": 0.07,
+  "drift_cusum_h": 4.0,
+  "drift_cusum_k": 0.25,
+  "max_weather_gap": 1.5,
+  "drift_reference_lag_days": 56,
+  "confidence_min": 0.7,
+  "single_day_factor": 0.8,
+  "monitor_days": 28,
+  "post_holiday_per_year": 8,
+  "trend_change": 0.2,
+  "price_min": 0.08,
+  "price_max": 0.6,
+  "price_years": [
+   2023,
+   2024
+  ]
+ },
+ "elapsed_s": 48
+}

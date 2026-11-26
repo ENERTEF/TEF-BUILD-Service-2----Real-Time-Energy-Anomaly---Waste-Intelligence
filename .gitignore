@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+lightning_logs/
+
+# Secrets and local config
+.env
+.env.*
+*.pem
+*.key
+
+# Data and run outputs: never commit (contain building names, supply numbers, costs)
+*.csv
+*.xlsx
+*.xls
+*.parquet
+*.db
+*.sqlite
+data/
+ml_models/
+results/*
+!results/config.json
+!results/evaluation.json
+REPORT.md
+
+# Node / editors
+node_modules/
+.vscode/
+.idea/
+.DS_Store
+
+# Run outputs
+outputs/
